@@ -23,7 +23,7 @@ jobs:
           run: yarn
 
         - name: Deploy the site
-          uses: guillbertrand/3c273@master
+          uses: benmatselby/hugo-deploy-gh-pages@master
           env:
             HUGO_VERSION: 0.82.0
             TARGET_REPO: guillbertrand/3c273
