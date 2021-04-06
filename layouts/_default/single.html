@@ -1,0 +1,8 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+    <small>{{ dateFormat "02-01-2006" .Params.date }} - {{ .Params.hours }}</small>
+    <p>
+        {{ .Content }}
+        <img src="/images/{{ .Params.image }}" />
+    </p>
+{{ end }}
