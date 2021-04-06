@@ -6,33 +6,28 @@ on:
       - master  # Set a branch to deploy
 
 jobs:
-  deploy:
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+  
+    build:
+      name: Deploy
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout master
+          uses: actions/checkout@v1
 
-      - name: Setup node env
-        uses: actions/setup-node@v2.1.2
-        with:
-          node-version: ${{ matrix.node }}
+        - name: Setup node env
+          uses: actions/setup-node@v2.1.2
+          with:
+            node-version: ${{ matrix.node }}
 
-      - name: Install dependencies
-        run: yarn
+        - name: Install dependencies
+          run: yarn
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          # extended: true
-
-      - name: Build
-        run: hugo --minify
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+        - name: Deploy the site
+          uses: guillbertrand/3c273@master
+          env:
+            HUGO_VERSION: 0.82.0
+            TARGET_REPO: guillbertrand/3c273
+            TARGET_BRANCH: master
+            TOKEN: ${{ secrets.TOKEN }}
+            HUGO_ARGS: '-t academic'
+            CNAME: guillbertrand.github.io
