@@ -1,7 +1,7 @@
 name: github pages
 
 on:
-  merge:
+  push:
     branches:
       - master  # Set a branch to deploy
 
