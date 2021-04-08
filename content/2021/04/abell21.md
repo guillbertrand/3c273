@@ -1,0 +1,21 @@
+---
+categories:
+- Dessins
+date: 2021-04-04
+hours: 23h UT
+duration: 30'
+image: tycho_2021-03-23-21-00_gb_small.png
+constellation: LEO
+catalogs:
+- UGC
+- NGC
+- PGC
+designations:
+- PGC 27077
+- UGC 5079 
+- NGC 2903
+tags:
+- Ciel profond
+- Galaxie spirale barrée
+title: Galaxie NGC 2903
+---
