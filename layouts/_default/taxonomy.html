@@ -3,10 +3,22 @@
 <main>
   <div>
    <h1>{{ .Title }}</h1>
-   <!-- ranges through each of the content files associated with a particular taxonomy term and renders the summary.html content view -->
+   <div class="flex flex-row flex-wrap">
     {{ range .Pages }}
-        {{ .Title }} 
+      <article>
+        <div>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ .Summary }}
+        </div>
+        {{ if .Truncated }}
+        <div>
+          <a href="{{ .RelPermalink }}">Lire la suite…</a>
+        </div>
+        {{ end }}
+      </article>
     {{ end }}
+    </div>
   </div>
 </main>
+{{ template "_internal/pagination.html" . }}
 {{ end }}
