@@ -1,0 +1,5 @@
+{{ $imagePath := printf "images/%s" .Params.image }}
+{{- $image := resources.Get $imagePath -}}
+<picture>
+  <img class="w-full" src="{{ ($image.Resize "500x400 jpg q75 NearestNeighbor Smart").RelPermalink }}" srcset="{{ ($image.Resize "500x400 jpg q75 NearestNeighbor Smart").RelPermalink }} 1x,{{ ($image.Fill "1000x800 jpg q75 NearestNeighbor Smart").RelPermalink }} 2x"/>
+</picture>
