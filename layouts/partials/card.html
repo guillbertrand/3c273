@@ -1,0 +1,13 @@
+<article class="flex flex-col pr-8 pb-8 w-full lg:w-1/2">
+<span class="font-serif text-gray-300 ml-4 mb-2 text-base">{{  dateFormat "02-01-2006" .Params.date }}</span>
+<div class=" rounded-t-2xl overflow-hidden" >
+    <a href="{{ .RelPermalink }}">{{ partial "image.html" . }}</a>
+    <div style="background-color:#888" class="p-8">
+        <h2 class="mb-4 text-2xl font-bold font-serif"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <div class="text-justify font-mono text-sm text-gray-100">{{ .Summary }}</div>
+        <div class="mt-2">
+            <a href="{{ .RelPermalink }}" class="underline text-gray-100 hover:font-bold">Lire la suite…</a>
+        </div>
+    </div>
+</div>
+</article>
