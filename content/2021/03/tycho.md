@@ -7,7 +7,6 @@ duration: 2h
 image: tycho_2021-03-23-21-00_gb_small.png
 tags:
 - Lune
-- Cratère
 title: Cratère tycho
 ---
 De nouveau de très bonnes conditions pour l’observation de la Lune. Cette fois ci je m’attarde sur le cratère Tycho observé à 742x avec mon Newton 400mm.
