@@ -4,7 +4,7 @@ categories:
 date: 2021-04-04
 hours: 23h UT
 duration: 30'
-image: tycho_2021-03-23-21-00_gb_small.png
+image: ABELL33-2021-04-04_23-40-T400x83_OIII_gbe_small.jpg
 constellation: LEO
 catalogs:
 - UGC

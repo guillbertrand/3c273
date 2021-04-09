@@ -3,6 +3,21 @@
 @tailwind utilities;
 
 body {
-    background-color: #444;
+    background-color: #555;
     color:#fff;
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    margin:10px auto;
+    font-size: 14px;
+}
+
+.pagination .page-item {
+    margin-right: 10px;
+}
+
+.pagination .page-item:hover {
+    text-decoration: underline;
 }
