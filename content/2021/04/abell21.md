@@ -16,6 +16,6 @@ designations:
 - NGC 2903
 tags:
 - Ciel profond
-- Galaxie spirale barrée
-title: Galaxie NGC 2903
+- Nébuleuse planétaire
+title: Abell 21
 ---

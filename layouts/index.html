@@ -1,18 +1,21 @@
 {{ define "main" }}
+
     <div class="flex flex-row flex-wrap">
-    {{ range first 10 .Site.RegularPages }}
-    <article class="w-1/2 pr-8">
-        <div>
-          <h2 class="mb-4 text-xl font-bold"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-          <div class="text-justify">{{ .Summary }}</div>
-        </div>
-        {{ if .Truncated }}
-        <div class="mt-4">
-          <a href="{{ .RelPermalink }}" class="underline hover:text-gray-700">Lire la suite…</a>
-        </div>
-        {{ end }}
-      </article>
-    {{ end }}
-    </div>
-    {{ template "_internal/pagination.html" . }}
+      {{ range first 10 .Site.RegularPages }}
+      <article class="w-1/2 pr-8 pb-8">
+          <div>
+            <h2 class="mb-4 text-2xl font-bold font-serif"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <div class="text-justify font-mono text-sm">{{ .Summary }}</div>
+          </div>
+          {{ if .Truncated }}
+          <div class="mt-4">
+            <a href="{{ .RelPermalink }}" class="underline hover:text-gray-700">Lire la suite…</a>
+          </div>
+          {{ end }}
+        </article>
+      {{ end }}
+      {{ template "_internal/pagination.html" . }}
+      </div>
+
+    
 {{ end }}

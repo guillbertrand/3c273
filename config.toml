@@ -1,7 +1,7 @@
 baseURL = "http://3c273.fr"
 languageCode = "fr-FR"
 title = "3C 273 - notes d'observations, dessins et photographies du ciel"
-paginate=30
+paginate=20
 [taxonomies]
   category="categories"
   tag="tags"

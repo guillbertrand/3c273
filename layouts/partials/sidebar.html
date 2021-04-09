@@ -1,0 +1,38 @@
+<div class="">
+
+
+    <section class="mb-4">
+        <h3 class="font-bold text-sm">Catégories</h3>
+        <ul class="text-xs">
+            {{ range .Site.Taxonomies.categories }}
+            <li><a class="hover:underline" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
+            {{ end }}
+              
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h3 class="font-bold text-sm">Types</h3>
+        <ul class="text-xs">
+            {{ range .Site.Taxonomies.tags }}
+            <li><a class="hover:underline" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
+            {{ end }}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h3 class="font-bold text-sm">Catalogues</h3>
+        <ul class="text-xs">
+            {{ range .Site.Taxonomies.catalogs }}
+            <li><a  class="hover:underline" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
+            {{ end }}
+        </ul>
+    </section>
+
+    <section class="mt-20 text-xs">
+        <p class="font-bold">3C 273 - Quésaco ?</p>
+        <p class="text-justify">
+            C'est le quasar le plus brillant du ciel, avec une magnitude apparente de +12,9, et l'un des plus proches. Sa distance de luminosité est 2,44 milliards d'années-lumière. Il est situé dans la constellation de la Vierge
+        </p>
+    </section>
+</div>
