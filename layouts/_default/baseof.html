@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
   {{- partial "head.html" . -}}
-  <body class="font-sans container mx-auto">
+  <body class="font-mono container mx-auto text-sm">
       {{- partial "header.html" . -}}
-      <div id="content">
-      {{- block "main" . }}{{- end }}
+      <div id="content" class="flex flex-row">
+        <div class="w-5/6">
+          {{- block "main" . }}{{- end }}
+        </div>
+        <div class="w-1/6">
+        {{- partial "sidebar.html" . -}}
+        </div>
       </div>
       {{- partial "footer.html" . -}}
   </body>
