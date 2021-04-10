@@ -10,11 +10,11 @@
         </div>
         <div @click="mobile_sidebar = !mobile_sidebar" class="fixed rounded-full bg-white text-black border-2 border-black font-mono text-xl lg:hidden right-4 top-4 z-50 w-6 h-6 leading-none flex flex-row justify-center">
           <span x-show="!mobile_sidebar">+</span>
-          <span x-show="mobile_sidebar">-</span>
+          <span x-show="mobile_sidebar" class="font-mono text-lg leading-none">x</span>
         </div>
         <div class="w-1/6 hidden lg:block mt-10">
 
-          <div class="fixed pr-10">
+          <div class="absolute pr-10">
             {{- partial "sidebar.html" . -}}
           </div>
   
