@@ -19,5 +19,6 @@ title: Abell 33
 location: Saint Pazanne (44)
 instrument: T400 f/4.3
 eyepiece: Ethos 21mm
+weight: 4
 ---
 Beaucoup plus difficile qu'Abell 21, **Abell 33** est vue uniquement avec le filtre OIII. Parfaitement ronde, la partie du coté de l'étoile HD83535 de magnitude 7.21 m'est apparue plus lumineuse que le reste du disque. J'ai avec le recul exagéré cette différence de contraste sur mon dessin. J'ai oublié d'enlever l'OIII pour placer les étoiles de faibles magnitude. 
