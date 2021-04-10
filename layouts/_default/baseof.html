@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
   {{- partial "head.html" . -}}
-  <body class="font-mono container mx-auto text-sm">
+  <body class="font-mono container mx-auto text-sm" x-data="{ mobile_sidebar: false }">
 
       <div id="content" class="flex flex-row justify-center">
-        
         <div class="w-full lg:w-5/6 pt-10">
           {{- partial "logo.html" . -}}
           {{- block "main" . }}{{- end }}
         </div>
-        <div class="w-1/6 hidden lg:block">
+        <div @click="mobile_sidebar = !mobile_sidebar" class="lg:hidden absolute right-0 z-50 p-4">+</div>
+        <div class="w-1/6 hidden lg:block mt-10">
           {{- partial "sidebar.html" . -}}
-          </div>
+        </div>
+        <div x-show="mobile_sidebar" style="background-color: #555;" class="absolute h-full top-0 left-0 w-full z-40 mt-4 px-10">
+          {{- partial "sidebar.html" . -}}
+        </div>
       </div>
       {{- partial "footer.html" . -}}
   </body>
