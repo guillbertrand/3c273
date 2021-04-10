@@ -8,14 +8,18 @@
           {{- partial "logo.html" . -}}
           {{- block "main" . }}{{- end }}
         </div>
-        <div @click="mobile_sidebar = !mobile_sidebar" class=" font-mono text-xl lg:hidden absolute right-0 z-50 p-4">
+        <div @click="mobile_sidebar = !mobile_sidebar" class="fixed rounded-full bg-white text-black border-2 border-black font-mono text-xl lg:hidden right-4 top-4 z-50 w-6 h-6 leading-none flex flex-row justify-center">
           <span x-show="!mobile_sidebar">+</span>
           <span x-show="mobile_sidebar">-</span>
         </div>
         <div class="w-1/6 hidden lg:block mt-10">
-          {{- partial "sidebar.html" . -}}
+
+          <div class="fixed pr-10">
+            {{- partial "sidebar.html" . -}}
+          </div>
+  
         </div>
-        <div x-show="mobile_sidebar" style="background-color: #555;" class="absolute h-full top-0 left-0 w-full z-40 mt-4 text-center py-10 px-20">
+        <div x-show="mobile_sidebar" style="background-color: #555;" class="absolute h-full top-0 left-0 w-full z-40 mt-4 text-center py-4 px-20">
           {{- partial "sidebar.html" . -}}
         </div>
       </div>
