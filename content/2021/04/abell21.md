@@ -5,17 +5,17 @@ date: 2021-04-04
 hours: 23h UT
 duration: 30'
 image: ABELL21-2021-04-04_22-00-T400x83_OIII_gbe_small.jpg
-constellation: LEO
+constellation: GEM
 catalogs:
-- UGC
-- NGC
-- PGC
+- ABELL
+- SH
+- PK
 designations:
-- PGC 27077
-- UGC 5079 
-- NGC 2903
+- ABELL21
+- SH2-274
+- PK205+14.1
 tags:
 - Ciel profond
 - Nébuleuse planétaire
-title: Abell 21
+title: Medusa Nebula - Abell 21
 ---
