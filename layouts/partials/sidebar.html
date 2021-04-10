@@ -1,9 +1,7 @@
 
-<div class="fixed pr-10 w-1/6">
-    {{- partial "header.html" . -}}
-    
+<div class="fixed pr-10 w-1/6 mt-10">
     <section class="mb-4">
-        <h3 class="font-bold text-xs uppercase mb-2">// Catégories</h3>
+        <h3 class="font-bold text-xs uppercase mb-2"><a class="underline" href="/categories/">Catégories</a></h3>
         <ul class="text-xs">
             {{ range .Site.Taxonomies.categories }}
             <li><a class="hover:underline" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
@@ -13,7 +11,7 @@
     </section>
 
     <section class="mb-4">
-        <h3 class="font-bold text-xs uppercase mb-2">// Types</h3>
+        <h3 class="font-bold text-xs uppercase mb-2"><a class="underline" href="/tags/">Types</a></h3>
         <ul class="text-xs">
             {{ range .Site.Taxonomies.tags }}
             <li><a class="hover:underline" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
@@ -22,7 +20,7 @@
     </section>
 
     <section class="mb-4">
-        <h3 class="font-bold text-xs uppercase mb-2">// Catalogues</h3>
+        <h3 class="font-bold text-xs uppercase mb-2"><a class="underline" href="/catalogs/">Catalogues</a></h3>
         <ul class="text-xs flex flex-row flex-wrap">
             {{ range .Site.Taxonomies.catalogs }}
             <li><a  class="hover:underline mr-2" href="{{ .Page.Permalink }}">.{{ .Page.Title }}</a></li>
@@ -30,7 +28,16 @@
         </ul>
     </section>
 
-    <section class="mt-10 text-xs">
+    <section class="mb-4">
+        <h3 class="font-bold text-xs uppercase mb-2"><a class="underline" href="/constellations/">Constellations</a></h3>
+        <ul class="text-xs flex flex-row flex-wrap">
+            {{ range .Site.Taxonomies.constellations }}
+            <li><a  class="hover:underline mr-2" href="{{ .Page.Permalink }}">.{{ .Page.Title }}</a></li>
+            {{ end }}
+        </ul>
+    </section>
+
+    <section class="mt-10 text-gray-300" style="font-size: 11px; line-height:12px">
         <p class="font-bold mb-2">3c273.fr - Quésaco ?</p>
         <p class="">
             <strong>3C 273</strong> est le quasar le plus brillant du ciel, avec une magnitude apparente de +12,9, et l'un des plus proches. Sa distance de luminosité est 2,44 milliards d'années-lumière. Il est situé dans la constellation de la Vierge

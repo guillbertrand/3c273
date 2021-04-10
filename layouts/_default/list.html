@@ -1,8 +1,8 @@
 {{ define "main" }}
-  <h1>Posts</h1>
+  <h1 class="texwt-3xl mb-10">{{ .Title }}</h1>
   <div class="flex flex-row flex-wrap">
   {{ range .Pages }}
-  {{- partial "card.html" . }}
+    {{- partial "card.html" (dict "context" .) }}
   {{ end }}
   </div>
   {{ template "_internal/pagination.html" . }}

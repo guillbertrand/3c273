@@ -2,13 +2,16 @@
 <html>
   {{- partial "head.html" . -}}
   <body class="font-mono container mx-auto text-sm">
+
       <div id="content" class="flex flex-row justify-center">
-        <div class="w-1/6">
-        {{- partial "sidebar.html" . -}}
-        </div>
-        <div class="w-5/6 pt-10">
+        
+        <div class="w-full lg:w-5/6 pt-10">
+          {{- partial "logo.html" . -}}
           {{- block "main" . }}{{- end }}
         </div>
+        <div class="w-1/6 hidden lg:block">
+          {{- partial "sidebar.html" . -}}
+          </div>
       </div>
       {{- partial "footer.html" . -}}
   </body>
