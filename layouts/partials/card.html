@@ -2,24 +2,31 @@
 {{ $border := "border-white" }}
 {{ $bg := "bg-black" }}
 {{ $color := "text-white" }}
-
-{{ range .context.Params.tags }}
-    {{ if eq . "Lune" }}
-
-    {{ end }}
-{{ end }}
-
-
 <article class="flex flex-col px-4 lg:px-0 lg:pr-8 pb-8 w-full lg:w-1/2">
     <div class=" rounded-tr-2xl overflow-hidden relative {{ $border }} border-4" >
         {{ if isset .context.Params "date" }}<span class="absolute  {{ $border }} {{ $bg }} border-l-4 border-b-4 py-2 px-4 right-0 top-0 font-serif rounded-bl-2xl {{ $color }} text-base">{{  dateFormat "02-01-2006" .context.Params.date }}</span>{{ end }}
-
-        <a href="{{ .RelPermalink }}">{{ partial "image.html" .context }}</a>
+        {{ if isset .context.Params "image" }}<a href="{{ .RelPermalink }}">{{ partial "image.html" .context }}</a>{{end}}
         <div class="p-8 {{ $border }} border-t-4 {{ $bg }}">
             <h2 class="mb-4 text-5xl font-bold {{ $color }} font-serif"><a href="{{ .RelPermalink }}">{{ .context.Title }}</a></h2>
-            <div class="text-justify font-mono {{ $color }} text-sm ">{{ .index }} {{ .context.Summary }}</div>
-            <div class="mt-2">
+            <div class="text-justify font-mono {{ $color }} text-sm ">{{ .context.Summary }}</div>
+            <div class="mt-4">
                 <a href="{{ .RelPermalink }}" style="border-bottom: 2px solid currentColor; display: inline-block; line-height: 14px;" class=" {{ $color }}  hover:font-bold">Lire la suite…</a>
+            </div>
+            <div class="mt-3">
+                <ul class="flex flex-row flex-wrap">
+                    {{ range .context.Params.categories }}
+                        <a href="{{ "categories" | absURL }}/{{ . | urlize }}/"><li style="font-size: 10px;" class="mr-1 mt-1 px-2 py-1 bg-black text-white cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black border border-white">{{ . }}</li></a>
+                    {{ end }}
+                    {{ range .context.Params.tags }}
+                        <a href="{{ "tags" | absURL }}/{{ . | urlize }}/"><li style="font-size: 10px;" class="mr-1 mt-1 px-2 py-1 bg-black text-white cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black border border-white">{{ . }}</li></a>
+                    {{ end }}   
+                    {{ range .context.Params.designations }}
+                        <a href="{{ "designations" | absURL }}/{{ . | urlize }}/"><li style="font-size: 10px;" class="mr-1 mt-1 px-2 py-1 bg-black text-white cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black border border-white">{{ . }}</li></a>
+                    {{ end }}
+                    {{ if isset .context.Params "constellations" }}
+                        <a href="{{ "constellations" | absURL }}/{{ .context.Params.constellations | urlize }}/"><li style="font-size: 10px;" class="mr-1 mt-1 px-2 py-1 bg-black text-white cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black border border-white">{{ .context.Params.constellations }}</li></a>
+                    {{ end }}
+                </ul>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 
 <div class="fixed pr-10 w-1/6 mt-10">
     <section class="mb-4">
-        <h3 class="font-bold text-xs uppercase mb-2">Catégories</h3>
+        <h3 class="font-bold text-xs uppercase mb-2"><a class="underline" href="/categories/">Catégories</a></h3>
         <ul class="text-xs">
             {{ range .Site.Taxonomies.categories }}
             <li><a class="hover:underline" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
@@ -11,7 +11,7 @@
     </section>
 
     <section class="mb-4">
-        <h3 class="font-bold text-xs uppercase mb-2">Types</h3>
+        <h3 class="font-bold text-xs uppercase mb-2"><a class="underline" href="/tags/">Types</a></h3>
         <ul class="text-xs">
             {{ range .Site.Taxonomies.tags }}
             <li><a class="hover:underline" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
@@ -20,7 +20,7 @@
     </section>
 
     <section class="mb-4">
-        <h3 class="font-bold text-xs uppercase mb-2">Catalogues</h3>
+        <h3 class="font-bold text-xs uppercase mb-2"><a class="underline" href="/catalogs/">Catalogues</a></h3>
         <ul class="text-xs flex flex-row flex-wrap">
             {{ range .Site.Taxonomies.catalogs }}
             <li><a  class="hover:underline mr-2" href="{{ .Page.Permalink }}">.{{ .Page.Title }}</a></li>
@@ -29,7 +29,7 @@
     </section>
 
     <section class="mb-4">
-        <h3 class="font-bold text-xs uppercase mb-2">Constellations</h3>
+        <h3 class="font-bold text-xs uppercase mb-2"><a class="underline" href="/constellations/">Constellations</a></h3>
         <ul class="text-xs flex flex-row flex-wrap">
             {{ range .Site.Taxonomies.constellations }}
             <li><a  class="hover:underline mr-2" href="{{ .Page.Permalink }}">.{{ .Page.Title }}</a></li>
