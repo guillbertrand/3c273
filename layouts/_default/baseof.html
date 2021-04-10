@@ -4,7 +4,7 @@
   <body class="font-mono container mx-auto text-sm" x-data="{ mobile_sidebar: false }">
 
       <div id="content" class="flex flex-row justify-center">
-        <div class="w-full lg:w-5/6 pt-10">
+        <div class="w-full lg:w-5/6 pt-4 lg:pt-10">
           {{- partial "logo.html" . -}}
           {{- block "main" . }}{{- end }}
         </div>
@@ -13,13 +13,12 @@
           <span x-show="mobile_sidebar" class="font-mono text-lg leading-none">x</span>
         </div>
         <div class="w-1/6 hidden lg:block mt-10">
-
-          <div class="absolute pr-10">
+          <div class="fixed pr-10">
             {{- partial "sidebar.html" . -}}
           </div>
   
         </div>
-        <div x-show="mobile_sidebar" style="background-color: #555;" class="absolute h-full top-0 left-0 w-full z-40 mt-4 text-center py-4 px-20">
+        <div x-show="mobile_sidebar" style="background-color: #555;" class="fixed h-full top-0 left-0 w-full z-40 mt-4 text-center py-4 px-20">
           {{- partial "sidebar.html" . -}}
         </div>
       </div>
