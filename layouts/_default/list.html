@@ -2,7 +2,7 @@
   <h1>Posts</h1>
   <div class="flex flex-row flex-wrap">
   {{ range .Pages }}
-  {{- partial "card.html" . }}
+  {{- partial "card.html" (dict "context" .) }}
   {{ end }}
   </div>
   {{ template "_internal/pagination.html" . }}

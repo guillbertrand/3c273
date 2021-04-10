@@ -5,7 +5,7 @@
    <h1 class="text-3xl font-bold">#{{ .Title }}</h1>
    <div class="flex flex-row flex-wrap">
     {{ range .Paginator.Pages }}
-    {{- partial "card.html" . }}
+    {{- partial "card.html" (dict "context" .) }}
     {{ end }}
     </div>
   </div>
