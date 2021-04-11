@@ -1,9 +1,10 @@
 {{ define "main" }}
   <h1 class="texwt-3xl mb-10">{{ .Title }}</h1>
-  <div class="flex flex-row flex-wrap">
-  {{ range .Pages }}
-    {{- partial "card.html" (dict "context" .) }}
-  {{ end }}
-  </div>
-  {{ template "_internal/pagination.html" . }}
+  <div class="mx-auto flex flex-row flex-wrap justify-center lg:justify-start">
+    {{ range $index, $elem := .Paginator.Pages }}
+        {{- partial "card.html" (dict "index" $index "context" $elem) }}
+    {{ end }}
+    
+    </div>
+    <div class="flex justify-center">{{ template "_internal/pagination.html" . }}</div>
 {{ end }}

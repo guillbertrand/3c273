@@ -17,10 +17,10 @@ designations:
 tags:
 - Ciel profond
 - Nébuleuse planétaire
-title: Medusa Nebula
+title: Abell 21
 location: Saint Pazanne (44)
 instrument: T400 f/4.3
 eyepiece: Ethos 21mm
 weight: 4
 ---
-Surement l'un des objets les plus faciles du catalogue Abell ? **Abell 21** est détecté avec un filtre OIII sous un ciel de campagne tout juste correct et une transparence non optimale. La structure en croissant de la nébuleuse est assez facile à décrypter. Cependant beaucoup plus difficile de retranscrire la structure filamenteuse complexe qui le compose.
+Surement l'un des objets les plus faciles du catalogue Abell ? La nébuleuse de la méduse (**Abell 21**) est détecté avec un filtre OIII sous un ciel de campagne tout juste correct et une transparence non optimale. La structure en croissant de la nébuleuse est assez facile à décrypter. Cependant beaucoup plus difficile de retranscrire la structure filamenteuse complexe qui le compose.
