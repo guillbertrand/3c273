@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1 class="texwt-3xl mb-10">{{ .Title }}</h1>
+<h1 class="text-3xl font-bold my-4">. {{ .Title }}</h1>
   <div class="mx-auto flex flex-row flex-wrap justify-center lg:justify-start">
     {{ range $index, $elem := .Paginator.Pages }}
         {{- partial "card.html" (dict "index" $index "context" $elem) }}

@@ -6,7 +6,7 @@
     <div class=" rounded-tr-2xl overflow-hidden relative {{ $border }} border-2" >
         {{ if isset .context.Params "date" }}<span class="absolute  {{ $border }} {{ $bg }} border-l-2 border-b-2 py-2 px-4 right-0 top-0 font-serif rounded-bl-2xl {{ $color }} text-base">{{  dateFormat "02-01-2006" .context.Params.date }}</span>{{ end }}
         {{ if isset .context.Params "image" }}<a href="{{ .context.RelPermalink }}">{{ partial "image.html" .context }}</a>{{end}}
-        <div class="p-8 {{ $border }} border-t-2 {{ $bg }}">
+        <div class="p-8 {{ $border }} {{ if isset .context.Params "image" }}border-t-2{{end}} {{ $bg }}">
             <h2 class="mb-4 text-5xl font-bold {{ $color }} font-serif"><a href="{{ .context.RelPermalink }}">{{ .context.Title }}</a></h2>
             <div class="text-justify font-mono {{ $color }} text-sm ">{{ .context.Summary }}</div>
            {{ if .context.Content }}
