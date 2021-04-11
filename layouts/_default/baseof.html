@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
   {{- partial "head.html" . -}}
-  <body class="font-mono container mx-auto text-sm" x-data="{ mobile_sidebar: false }">
+  <body class="font-mono container mx-auto text-sm" x-data="{ showMenu: false }">
 
       <div id="content" class="flex flex-row justify-center">
         <div class="w-full lg:w-5/6 pt-4 lg:pt-10">
           {{- partial "logo.html" . -}}
           {{- block "main" . }}{{- end }}
         </div>
-        <div @click="mobile_sidebar = !mobile_sidebar" class="fixed rounded-full bg-white text-black border-2 border-black font-mono text-xl lg:hidden right-4 top-4 z-50 w-6 h-6 leading-none flex flex-row justify-center">
-          <span x-show="!mobile_sidebar">+</span>
-          <span x-show="mobile_sidebar" class="font-mono text-lg leading-none">x</span>
-        </div>
+        <button @click.prevent="showMenu = !showMenu " class="fixed lg:hidden right-4 top-4 flex justify-between text-white">
+          <svg x-show="!showMenu" class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          
+        </button>
         <div class="w-1/6 hidden lg:block mt-10">
           <div class="fixed pr-10">
             {{- partial "sidebar.html" . -}}
           </div>
   
         </div>
-        <div x-show="mobile_sidebar" style="background-color: #555;" class="fixed h-full top-0 left-0 w-full z-40 mt-4 text-center py-4 px-20">
+        <div x-show="showMenu" style="background-color: #555;" class="fixed h-full w-full top-0 left-0 z-40 mt-4 text-center py-4 px-20">
+          <button @click.prevent="showMenu = !showMenu " class="fixed top-4 right-4 font-bold flex justify-between text-white">
+            <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
           {{- partial "sidebar.html" . -}}
         </div>
       </div>
