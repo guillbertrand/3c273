@@ -4,10 +4,9 @@ categories:
 date: 2020-11-10
 hours: 19h00 UT
 image: mars-2020-11-10_19-30_T400_742x_gbe_small.png
-designations:
-- Mars
 tags:
 - Planète
+- Mars
 title: Mars
 ---
 Bonne surprise après deux sorties ou j'étais rentré bredouille à cause d'une turbulence vraiment trop forte. Ici les conditions étaient bonnes mais beaucoup d'humidité et des brouillards évoluants rapidement.

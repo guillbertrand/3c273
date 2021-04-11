@@ -4,10 +4,9 @@ categories:
 date: 2020-10-30
 hours: 20h30 UT
 image: mars-2020-10-30_21-00_T400_371x_gbe_small.png
-designations:
-- Mars
 tags:
 - Planète
+- Mars
 title: Mars
 ---
 Mars le 3 novembre conditions corrects mais pas de moment magique avec des détails hyper fins.
