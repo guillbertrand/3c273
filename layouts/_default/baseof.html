@@ -18,9 +18,8 @@
           <div class="fixed pr-10">
             {{- partial "sidebar.html" . -}}
           </div>
-  
         </div>
-        <div x-show="showMenu" style="background-color: #555;" class="fixed h-full w-full top-0 left-0 z-40 mt-4 text-center py-4 px-20">
+        <div x-show="showMenu" style="background-color: #555;" class="fixed h-full w-full top-0 left-0 z-40 text-center py-8 px-20 overflow-scroll">
           <button @click.prevent="showMenu = !showMenu " class="fixed top-4 right-4 font-bold flex justify-between text-white">
             <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M6 18L18 6M6 6l12 12"></path>
