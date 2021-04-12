@@ -3,7 +3,7 @@ categories:
 - Dessins
 date: 2020-07-18
 hours: 21h20 UT
-image: C2020_F3_NEOWISE_2020_07_18-21_20_T400x220_gbe_small.png
+image: dessins/C2020_F3_NEOWISE_2020_07_18-21_20_T400x220_gbe_small.png
 designations:
 - C/2020 F3 Neowise
 tags:

@@ -4,7 +4,7 @@ categories:
 date: 2020-06-01
 hours: 19h UT
 duration: 2h
-image: moretus_2020-05-31_19-30_T400x440_small.png
+image: dessins/moretus_2020-05-31_19-30_T400x440_small.png
 tags:
 - Lune
 title: Moretus
