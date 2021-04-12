@@ -8,7 +8,7 @@
       {{ if eq $image_ext "gif" }}
       <img src="{{ $image.RelPermalink }}" />
       {{ else }}
-      <img src="{{ ($image.Resize "400x jpg q75 Lanczos Smart").RelPermalink }}" srcset="{{ ($image.Resize "1000x jpg q75 Lanczos Smart").RelPermalink }} 1x,{{ ($image.Resize "2000x jpg q75 Lanczos Smart").RelPermalink }} 2x"/>
+      <img src="{{ ($image.Resize "800x jpg q75 Lanczos Smart").RelPermalink }}" srcset="{{ ($image.Resize "800x jpg q75 Lanczos Smart").RelPermalink }} 1x,{{ ($image.Resize "1600x jpg q75 Lanczos Smart").RelPermalink }} 2x"/>
       {{ end }}
     </picture>
   {{ end }}
