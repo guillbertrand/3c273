@@ -4,7 +4,7 @@ categories:
 date: 2019-05-25
 hours: 00h00 UT
 duration: 30'
-image: 2019-05-25_23-45_gb_small.jpg
+image: dessins/2019-05-25_23-45_gb_small.jpg
 constellations: CVN
 catalogs:
 - NGC

@@ -4,7 +4,7 @@ categories:
 date: 2021-03-23
 hours: 19h UT
 duration: 2h
-image: tycho_2021-03-23-21-00_gb_small.png
+image: dessins/tycho_2021-03-23-21-00_gb_small.png
 tags:
 - Lune
 title: Tycho

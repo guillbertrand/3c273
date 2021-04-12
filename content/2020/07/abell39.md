@@ -4,7 +4,7 @@ categories:
 date: 2020-07-21
 hours: 23h30 UT
 duration: 30'
-image: Abell_39_2020-07-21_23-30_T400x83_gbe_small.png
+image: dessins/Abell_39_2020-07-21_23-30_T400x83_gbe_small.png
 constellations: HER
 catalogs:
 - ABELL

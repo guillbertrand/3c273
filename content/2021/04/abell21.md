@@ -4,7 +4,7 @@ categories:
 date: 2021-04-04
 hours: 23h UT
 duration: 30'
-image: ABELL21-2021-04-04_22-00-T400x83_OIII_gbe_small.jpg
+image: dessins/ABELL21-2021-04-04_22-00-T400x83_OIII_gbe_small.jpg
 constellations: GEM
 catalogs:
 - ABELL

@@ -3,7 +3,7 @@ categories:
 - Dessins
 date: 2020-10-30
 hours: 21h00 UT
-image: mars-2020-10-30_21-00_T400_371x_gbe_small.png
+image: dessins/mars-2020-10-30_21-00_T400_371x_gbe_small.png
 tags:
 - Planète
 - Mars
