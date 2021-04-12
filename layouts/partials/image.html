@@ -6,9 +6,9 @@
       {{ $image_type_arr := split .Params.image "." }}
       {{ $image_ext := index $image_type_arr 1 }}
       {{ if eq $image_ext "gif" }}
-      <img class="w-full" src="{{ $image.RelPermalink }}" />
+      <img src="{{ $image.RelPermalink }}" />
       {{ else }}
-      <img class="w-full" src="{{ ($image.Resize "500x400 jpg q75 Lanczos Smart").RelPermalink }}" srcset="{{ ($image.Resize "500x400 jpg q75 NearestNeighbor Smart").RelPermalink }} 1x,{{ ($image.Fill "1000x800 jpg q75 NearestNeighbor Smart").RelPermalink }} 2x"/>
+      <img src="{{ ($image.Resize "400x jpg q75 Lanczos Smart").RelPermalink }}" srcset="{{ ($image.Resize "1000x jpg q75 Lanczos Smart").RelPermalink }} 1x,{{ ($image.Resize "2000x jpg q75 Lanczos Smart").RelPermalink }} 2x"/>
       {{ end }}
     </picture>
   {{ end }}

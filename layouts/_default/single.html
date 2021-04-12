@@ -1,8 +1,9 @@
 {{ define "main" }}
-    <h1 class="text-4xl font-serif font-bold">{{ .Title }}</h1>
-    <small>{{ dateFormat "02-01-2006" .Params.date }} - {{ .Params.hours }}</small>
-    <p>
-        {{ .Content }}
-        {{ partial "image.html" . }}
-    </p>
+    <a href="/" class="text-xs">< Retour</a>
+    <h1 class="text-7xl font-serif font-bold mt-4">{{ .Title }}</h1>
+    <span class="font-bold text-sm">{{ dateFormat "02-01-2006" .Params.date }} - {{ .Params.hours }}</span>
+    <div class="w-full">
+        <div class="w-full mr-20">{{ partial "image.html" . }}</div>
+        <p class="my-4">{{ .Content }}</p>   
+    </div>
 {{ end }}
