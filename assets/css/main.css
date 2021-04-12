@@ -17,6 +17,12 @@ body {
 .pagination .page-item {
     margin-right: 10px;
 }
+.pagination .page-item.active {
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
 
 .pagination .page-item:hover {
     text-decoration: underline;

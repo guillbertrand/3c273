@@ -5,7 +5,6 @@ date: 2020-11-10
 hours: 19h00 UT
 image: dessins/mars-2020-11-10_19-30_T400_742x_gbe_small.png
 tags:
-- Planète
 - Mars
 title: Mars
 ---
