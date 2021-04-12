@@ -2,7 +2,7 @@
 {{ define "main" }}
 <main>
   <div>
-   <h1 class="text-3xl font-bold my-4">. {{ .Title }}</h1>
+   <h1 class="text-3xl font-bold my-4 ml-4">. {{ .Title }}</h1>
    <div class="mx-auto flex flex-row flex-wrap justify-center lg:justify-start">
     {{ range .Paginator.Pages }}
     {{- partial "card.html" (dict "context" .) }}

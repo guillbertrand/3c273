@@ -1,7 +1,7 @@
 <head>
 
     {{ $title :=  (cond (ne ($.Param "seo.title") nil) ($.Param "seo.title") ( printf "%s | %s" .Title .Site.Title) ) }}
-    {{ $description :=  (cond (ne ($.Param "seo.description") nil) ($.Param "seo.description") .Description ) }}
+    {{ $description :=  (cond (ne ($.Param "description") nil) ($.Param "description") .Description ) }}
     <title>{{$title}}</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
