@@ -1,13 +1,19 @@
 {{ define "main" }}
     <a href="javascript:history.back();" class="text-xs ml-4">< Retour</a>
     <div class="mt-4 mx-4 lg:mr-8 lg:ml-0 bg-black border-2 lg:border-4 border-white p-4">
-        <h1 class="text-7xl font-serif font-bold mb-8 mt-4">{{ .Title }}</h1>
+        <h1 class="text-5xl lg:text-6xl font-serif font-bold mb-8 mt-4">{{ .Title }}</h1>
         <div class="w-full">
             <div class="w-full mr-20">{{ partial "image.html" . }}</div>
+            <div class="w-full mr-20">
+                {{ if isset .Params "images" }}
+                    {{ partial "gallery.html" . }}
+                {{ end }}
+            </div>
+
             <div class="my-4">{{ .Content }}</div>  
             <div>
                 <ul class="">
-                    {{ if isset .Params "date" }}<li>Date : <span class="text-sm">{{ dateFormat "02-01-2006" .Params.date }} - {{ .Params.hours }}</span></li>{{ end }}
+                    {{ if isset .Params "date" }}<li>Date : <span class="text-sm">{{ dateFormat "02-01-2006" .Params.date }} {{ if isset .Params "hours" }} - {{ .Params.hours }}{{ end }}</span></li>{{ end }}
                     {{ if isset .Params "location" }}<li>Lieu : <span class="text-sm">{{ .Params.location }}</span></li>{{ end }}
                     {{ if isset .Params "instrument" }}<li>Instrument : <span class="text-sm">{{ .Params.instrument }}</span></li>{{ end }}
                     {{ if isset .Params "eyepiece" }}<li>Oculaire : <span class="text-sm">{{ .Params.eyepiece }}</span></li>{{ end }}

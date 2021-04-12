@@ -2,7 +2,7 @@
   {{ $imagePath := printf "images/%s" .Params.image }}
   {{- $image := resources.Get $imagePath -}}
   {{ if $image }}
-    <picture>
+    <picture class="">
       {{ $image_type_arr := split .Params.image "." }}
       {{ $image_ext := index $image_type_arr 1 }}
       {{ if eq $image_ext "gif" }}

@@ -1,0 +1,19 @@
+{{ if isset .Params "images" }}
+  <div class="flex flex-row mt-8 flex-wrap">
+    {{ range .Params.images }}
+    {{ $imagePath := printf "images/%s" . }}
+    {{- $image := resources.Get $imagePath -}}
+    {{ if $image }}
+      <picture class="w-1/2 pr-2 mb-2">
+        {{ $image_type_arr := split . "." }}
+        {{ $image_ext := index $image_type_arr 1 }}
+        {{ if eq $image_ext "gif" }}
+        <img class="w-full" src="{{ $image.RelPermalink }}" />
+        {{ else }}
+        <img class="" src="{{ ($image.Resize "x400 jpg q75 Lanczos Smart").RelPermalink }}" srcset="{{ ($image.Resize "x400 jpg q75 Lanczos Smart").RelPermalink }} 1x,{{ ($image.Resize "x800 jpg q75 Lanczos Smart").RelPermalink }} 2x"/>
+        {{ end }}
+      </picture>
+    {{ end }}
+  {{ end }}
+  </div>
+{{ end }}
