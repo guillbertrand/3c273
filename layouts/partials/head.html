@@ -1,7 +1,7 @@
 <head>
     {{ $title :=  (cond (ne ($.Param "seo.title") nil) ($.Param "seo.title")     ( printf "%s | %s" .Title .Site.Title) ) }}
     {{- if .IsHome -}}
-        {{ $title =  ( printf "%s | %s" .Title .Site.Params.description ) }}
+        {{ $title =  ( printf "%s" .Title ) }}
     {{ end }}
     {{ $description :=  (cond (ne ($.Param "description") nil) ($.Param "description") .Description ) }}
     <title>{{$title}}</title>
