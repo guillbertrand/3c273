@@ -27,3 +27,7 @@ body {
 .pagination .page-item:hover {
     text-decoration: underline;
 }
+
+img.invert:hover {
+    -webkit-filter: invert(100%);
+}
