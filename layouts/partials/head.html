@@ -54,8 +54,29 @@
     {{ $style := $css | resources.PostCSS | minify  | fingerprint  }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
     {{ end }}
+
+    {{ $js := resources.Get "js/search.js" }}
+    <script src="{{ $js.RelPermalink }}"></script>
+
+
     <script type="module" src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js" defer></script>
-  
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+
+   
+    {{ $js := resources.Get "js/lunr.stemmer.support.js" }}
+    {{ if .Site.IsServer }}
+    <script src="{{ $js.RelPermalink }}"></script>
+    {{ else }}
+    {{ $js := $js | minify  | fingerprint  }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    {{ end }}
+    {{ $js := resources.Get "js/lunr.fr.js" }}
+    {{ if .Site.IsServer }}
+    <script src="{{ $js.RelPermalink }}"></script>
+    {{ else }}
+    {{ $js := $js | minify  | fingerprint  }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    {{ end }}
   
     </head>

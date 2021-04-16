@@ -10,3 +10,8 @@ paginate=16
   catalog="catalogs"
   designation="designations"
   constellation="constellations"
+[outputFormats.Search]
+  baseName= "search"
+  mediaType="application/json"
+[outputs]
+  home = [ "HTML", "Search" ]
