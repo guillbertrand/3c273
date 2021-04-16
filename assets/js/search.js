@@ -17,9 +17,11 @@
       {
         var doc = lunrLookup[result.ref];
 
+        const date = new Date(doc.date)
         results.push({
           'uri':doc.uri,
           'title':doc.title,
+          'date': date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear(),
           'summary':lunrTruncate(doc.content,30)
         })
       }
