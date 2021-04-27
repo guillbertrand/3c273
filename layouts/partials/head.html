@@ -20,10 +20,6 @@
     <meta name="keywords" content="{{ . }}" />
     {{- end -}}
     
-    {{ if .Params.seo.noindex}}
-    <meta name="robots" content="noindex">
-    {{ end }}
-    
     {{- if .IsHome -}}
     {{- range .Site.AllPages -}}
     {{- $section := .Section -}}
