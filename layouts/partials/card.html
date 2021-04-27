@@ -7,7 +7,7 @@
         {{ if isset .context.Params "date" }}<span class="absolute font-bold  {{ $border }} {{ $bg }} border-l-2 border-b-2 lg:border-l-4 lg:border-b-4 py-2 px-4 right-0 top-0 font-serif rounded-bl-2xl {{ $color }} lg:text-lg text-base">{{  dateFormat "02/01/2006" .context.Params.date }}</span>{{ end }}
         {{ if isset .context.Params "image" }}<a href="{{ .context.RelPermalink }}">{{ partial "thumbnail.html" .context }}</a>{{end}}
         <div class="p-8 {{ $border }} {{ if isset .context.Params "image" }}border-t-2 lg:border-t-4{{end}} {{ $bg }}">
-            <h2 class="mb-4 text-4xl lg:text-5xl font-bold font-serif"><a href="{{ .context.RelPermalink }}"><span style="background-color:#828282" class="text-white leading-tight">{{ .context.Title }}</span></a></h2>
+            <h2 class="mb-4 text-4xl lg:text-5xl font-bold font-serif"><a href="{{ .context.RelPermalink }}"><span style="background-color:#2d5988" class="text-white leading-tight">{{ .context.Title }}</span></a></h2>
             <div class="text-justify font-mono {{ $color }} text-xs lg:text-sm ">{{ .context.Summary }}</div>
            {{ if .context.Content }}
             <div class="mt-4">
