@@ -9,7 +9,7 @@
         @keyup="search" />
     </div>
     <div x-show="results.length" class="w-full absolute top-12 lg:top-16 lg:pr-8 z-40">
-      <ul class="text-black z-40 w-full rounded-lg bg-white shadow-lg border-black border-2 lg:border-4 p-4">
+      <ul class="text-black z-40 w-full rounded-lg bg-white shadow-lg border-black border-2 p-4">
         <template x-for="result in results">
             <li class="font-serif hover:bg-blue-custom bg-gray-100 rounded p-4 hover:text-white hover:font-bold mb-1">
               <a class="font-serif w-full flex flex-row items-center justify-between " :href="result.uri" >
