@@ -1,23 +1,23 @@
 <div x-data="init()" class="mx-4 mb-4 lg:mx-0 lg:pr-8 z-40 relative">
-    <div class=" bg-black border-2 border-white w-full flex flex-row align-middle justify-center items-center rounded-tr-xl">
-      <svg  width="24" height="24" fill="none" class="text-white mx-2 group-hover:text-gray-500 transition-colors duration-200"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    <div class="searchForm bg-lightGray text-gray1 rounded-full w-full flex flex-row align-middle justify-center items-center ">
+      <svg  width="24" height="24" fill="none" class="text-gray1 ml-2 mr-4"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="#7a828f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
         <input
-        class="w-full py-2 text-white bg-black placeholder-white font-serif text-base lg:text-lg appearance-none rounded-tr-xl"
+        class="w-full py-2 text-gray1 outline-none bg-lightGray rounded-full placeholder-gray1 font-mono text-sm appearance-none"
         type="text"
         placeholder="Recherche rapide"
         x-model="q"
         @keyup="search" />
     </div>
     <div x-show="results.length" class="w-full absolute top-12 lg:top-16 lg:pr-8 z-40">
-      <ul class="text-black z-40 w-full rounded-lg bg-white shadow-lg border-black border-2 p-4">
+      <ul class="text-gray1 z-40 w-full rounded-lg bg-lightGray shadow-lg border-darkGray border-2 p-4">
         <template x-for="result in results">
-            <li class="font-serif hover:bg-blue-custom bg-gray-100 rounded p-4 hover:text-white hover:font-bold mb-1">
-              <a class="font-serif w-full flex flex-row items-center justify-between " :href="result.uri" >
+            <li class="font-serif hover:bg-blue-custom bg-darkGray rounded p-4 hover:text-gray-400 hover:font-bold mb-1">
+              <a class="font-serif w-full flex flex-row items-center justify-between" :href="result.uri" >
                 <div class="flex flex-col">
-                  <span class="font-serif" x-text="result.title"></span>
+                  <span class="font-serif text-white" x-text="result.title"></span>
                   <span class="text-xs" x-text="result.date"></span>
                 </div>
-                <svg class="DocSearch-Hit-Select-Icon" width="20" height="20" viewBox="0 0 20 20"><g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3v4c0 2-2 4-4 4H2"></path><path d="M8 17l-6-6 6-6"></path></g></svg>
+                <svg class="DocSearch-Hit-Select-Icon text-lightBlue" width="20" height="20" viewBox="0 0 20 20"><g stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3v4c0 2-2 4-4 4H2"></path><path d="M8 17l-6-6 6-6"></path></g></svg>
               </a>
             </li>
         </template>

@@ -3,10 +3,16 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      scale: {
+        '102':'1.02'
+      },
       colors: {
-        blue: {
-          custom: '#2d5988'
-        }
+        darkGray: '#171721',
+        lightGray:'#23232d',
+        gray1:'#7a828f',
+        gray2:'#23232d',
+        blue1:'#262b4c',
+        lightBlue:'#02ffe7'
     }
   }
   },

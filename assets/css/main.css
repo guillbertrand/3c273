@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-    background-color: #1b3755;
-    color:#fff;
+    background: #171721;
+    color: rgba(156, 163, 175, var(--tw-text-opacity));
 }
 
 .pagination {
