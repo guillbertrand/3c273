@@ -2,16 +2,16 @@ baseURL = "http://3c273.fr"
 languageCode = "fr-FR"
 title = "3C273.fr"
 [params]
-  description = "Dessins, photographies et notes d'observations astronomiques par Guillaume Bertrand"
-paginate=16
+description = "Dessins, photographies et notes d'observations astronomiques par Guillaume Bertrand"
+paginate = 20
 [taxonomies]
-  category="categories"
-  tag="tags"
-  catalog="catalogs"
-  designation="designations"
-  constellation="constellations"
+category = "categories"
+tag = "tags"
+catalog = "catalogs"
+designation = "designations"
+constellation = "constellations"
 [outputFormats.Search]
-  baseName= "search"
-  mediaType="application/json"
+baseName = "search"
+mediaType = "application/json"
 [outputs]
-  home = [ "HTML", "Search" ]
+home = ["HTML", "Search"]

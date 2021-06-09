@@ -1,32 +1,41 @@
 
-{{ $border := "border-white" }}
-{{ $bg := "bg-black" }}
-{{ $color := "text-white" }}
+
 <article class="flex flex-col px-4 lg:px-0 lg:pr-8 pb-8 w-full lg:w-1/2 z-20">
-    <div class=" rounded-tr-2xl overflow-hidden relative {{ $border }} border-2" >
-        {{ if isset .context.Params "date" }}<span class="absolute font-bold  {{ $border }} {{ $bg }} border-l-2 border-b-2 py-2 px-4 right-0 top-0 font-serif rounded-bl-2xl {{ $color }} lg:text-lg text-base">{{  dateFormat "02/01/2006" .context.Params.date }}</span>{{ end }}
-        {{ if isset .context.Params "image" }}<a href="{{ .context.RelPermalink }}">{{ partial "thumbnail.html" .context }}</a>{{end}}
-        <div class="p-8 {{ $border }} {{ if isset .context.Params "image" }}border-t-2{{end}} {{ $bg }}">
-            <h2 class="mb-4 text-2xl lg:text-4xl font-bold font-serif"><a href="{{ .context.RelPermalink }}"><span class="text-white leading-tight bg-blue-custom">{{ .context.Title }}</span></a></h2>
-            <div class="text-justify font-mono {{ $color }} text-xs lg:text-sm ">{{ .context.Summary }}</div>
-           {{ if .context.Content }}
-            <div class="mt-4">
-                <a href="{{ .context.RelPermalink }}" style="border-bottom: 1px solid currentColor; display: inline-block; line-height: 14px;" class=" {{ $color }}  hover:font-bold text-xs lg:text-sm">Lire la suite…</a>
+    <div class="post overflow-hidden relative bg-gray2 rounded-2xl  transition ease-in-out duration-300 transform  hover:scale-102 overflow-hidden" x-data="{ darkMode: true }" >
+        {{ if isset .context.Params "image" }}<a href="{{ .context.RelPermalink }}" class="">{{ partial "thumbnail.html" .context }}</a>{{end}}
+        <div class="relative p-8">
+            {{ if (or (in .context.Params.tags "Ciel profond") (in .context.Params.tags "Comète"))  }}
+            <div class="absolute cursor-pointer top-0 right-0 fill-current text-gray1 pt-12 pr-8"  >
+                <div x-show="darkMode" @click="darkMode = false">
+                    {{- partial "svg-light.html" . -}}
+                </div>
+                <div x-show="!darkMode" class="animate-pulse" @click="darkMode = true">
+                    {{- partial "svg-dark.html" . -}}
+                </div>
             </div>
             {{ end }}
-            <div class="mt-3">
+            {{ if isset .context.Params "date" }}<span class="py-2 font-serif text-sm text-lightBlue">{{  dateFormat "02.01.2006" .context.Params.date }}</span>{{ end }}
+           
+            <h2 class="mb-4 w-11/12 text-2xl lg:text-4xl font-bold font-serif"><a href="{{ .context.RelPermalink }}"><span class="text-white leading-tight bg-blue-custom">{{ .context.Title }}</span></a></h2>
+             <div class="text-justify text-gray1 font-mono text-xs lg:text-sm ">{{ .context.Summary }}</div>
+           {{ if .context.Content }}
+            <div class="mt-4">
+                <a href="{{ .context.RelPermalink }}" style="display: inline-block; line-height: 14px;" class="hover:font-bold hover:text-white text-gray1 underline text-xs lg:text-sm">Lire la suite…</a>
+            </div>
+            {{ end }}
+            <div class="mt-8">
                 <ul class="flex flex-row flex-wrap">
                     {{ range .context.Params.categories }}
-                        <a href="{{ "categories" | absURL }}/{{ . | urlize }}/"><li style="font-size: 10px;" class="mr-1 mt-1 px-2 py-1 bg-black text-white cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black border border-white">{{ . }}</li></a>
+                        <a href="{{ "categories" | absURL }}/{{ . | urlize }}/"><li style="font-size: 10px;" class="bg-darkGray px-3 py-2 text-gray1 rounded-lg mr-1 mb-1 hover:text-white">{{ . }}</li></a>
                     {{ end }}
                     {{ range .context.Params.tags }}
-                        <a href="{{ "tags" | absURL }}/{{ . | urlize }}/"><li style="font-size: 10px;" class="mr-1 mt-1 px-2 py-1 bg-black text-white cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black border border-white">{{ . }}</li></a>
+                        <a href="{{ "tags" | absURL }}/{{ . | urlize }}/"><li style="font-size: 10px;" class="bg-darkGray px-3 py-2 text-gray1 rounded-lg mr-1 mb-1 hover:text-white">{{ . }}</li></a>
                     {{ end }}   
                     {{ range .context.Params.designations }}
-                        <a href="{{ "designations" | absURL }}/{{ . | urlize }}/"><li style="font-size: 10px;" class="mr-1 mt-1 px-2 py-1 bg-black text-white cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black border border-white">{{ . }}</li></a>
+                        <a href="{{ "designations" | absURL }}/{{ . | urlize }}/"><li style="font-size: 10px;" class="bg-darkGray px-3 py-2 text-gray1 rounded-lg mr-1 mb-1 hover:text-white">{{ . }}</li></a>
                     {{ end }}
                     {{ if isset .context.Params "constellations" }}
-                        <a href="{{ "constellations" | absURL }}/{{ .context.Params.constellations | urlize }}/"><li style="font-size: 10px;" class="mr-1 mt-1 px-2 py-1 bg-black text-white cursor-pointer hover:bg-white hover:text-black hover:border hover:border-black border border-white">{{ .context.Params.constellations }}</li></a>
+                        <a href="{{ "constellations" | absURL }}/{{ .context.Params.constellations | urlize }}/"><li style="font-size: 10px;" class="bg-darkGray px-3 py-2 text-gray1 rounded-lg mr-1 mb-1 hover:text-white">{{ .context.Params.constellations }}</li></a>
                     {{ end }}
                 </ul>
             </div>
