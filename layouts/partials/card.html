@@ -14,7 +14,7 @@
                 </div>
             </div>
             {{ end }}
-            {{ if isset .context.Params "date" }}<span class="py-2 font-serif text-sm text-lightBlue">{{  dateFormat "02.01.2006" .context.Params.date }}</span>{{ end }}
+            {{ if isset .context.Params "date" }}<span class="py-2 font-serif text-lg text-lightYellow">{{  dateFormat "02.01.2006" .context.Params.date }}</span>{{ end }}
            
             <h2 class="mb-4 w-11/12 text-2xl lg:text-4xl font-bold font-serif"><a href="{{ .context.RelPermalink }}"><span class="text-white leading-tight bg-blue-custom">{{ .context.Title }}</span></a></h2>
              <div class="text-justify text-gray1 font-mono text-xs lg:text-sm ">{{ .context.Summary }}</div>
