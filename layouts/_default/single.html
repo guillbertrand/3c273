@@ -14,7 +14,7 @@
                 <h1 class="text-4xl lg:text-5xl font-serif font-bold mb-8"><span class="text-white bg-blue-custom leading-tight">{{ .Title }}</span></h1>
                 <div>
                     <ul class="text-gray1">
-                        {{ if isset .Params "date" }}<li class="text-lightBlue"><strong>Date : </strong><span class="text-sm">{{ dateFormat "02-01-2006" .Params.date }} {{ if isset .Params "hours" }} - {{ .Params.hours }}{{ end }}</span></li>{{ end }}
+                        {{ if isset .Params "date" }}<li class="text-lightYellow"><strong>Date : </strong><span class="text-sm">{{ dateFormat "02-01-2006" .Params.date }} {{ if isset .Params "hours" }} - {{ .Params.hours }}{{ end }}</span></li>{{ end }}
                         {{ if isset .Params "location" }}<li><strong class="text-white">Lieu : </strong><span class="text-sm">{{ .Params.location }}</span></li>{{ end }}
                         {{ if isset .Params "instrument" }}<li><strong class="text-white">Instrument : </strong><span class="text-sm">{{ .Params.instrument }}</span></li>{{ end }}
                         {{ if isset .Params "eyepiece" }}<li><strong class="text-white">Oculaire : </strong><span class="text-sm">{{ .Params.eyepiece }}</span></li>{{ end }}

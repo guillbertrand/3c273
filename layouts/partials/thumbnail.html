@@ -8,7 +8,7 @@
       {{ if eq $image_ext "gif" }}
       <img class="w-full" :class="!darkMode ? 'filter invert':''" src="{{ $image.RelPermalink }}" />
       {{ else }}
-      <img class="w-full" :class="!darkMode ? 'filter invert':''" src="{{ ($image.Fill "500x400 jpg q75 Lanczos Smart").RelPermalink }}" srcset="{{ ($image.Fill "500x400 jpg q75 Lanczos Smart").RelPermalink }} 1x,{{ ($image.Fill "1000x800 jpg q75 Lanczos Smart").RelPermalink }} 2x"/>
+      <img class="w-full" :class="!darkMode ? 'filter invert':''" src="{{ ($image.Fill "500x400 jpg q75 Lanczos Center").RelPermalink }}" srcset="{{ ($image.Fill "500x400 jpg q75 Lanczos Center").RelPermalink }} 1x,{{ ($image.Fill "1000x800 jpg q75 Lanczos Center").RelPermalink }} 2x"/>
       {{ end }}
     </picture>
   {{ end }}
