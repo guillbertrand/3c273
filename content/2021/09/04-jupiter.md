@@ -10,7 +10,7 @@ title: Jupiter
 instrument: T400 f/4.3
 eyepiece: Ethos 4.7mm + Powermate x2
 ---
-Samedi 4 septembre 2021 : les conditions météos annoncées n'étaient pas très encourageantes. Passage nuageux prévus toute la nuit. A 22h hl ciel clair sans aucun nuage. Je décide de sortir rapidement le T400 pour voir ce que dit le seeing. En pointant une étoile pour la collimation, très bonne surprise ! L'atmosphère est bien stable. A 22h30 je pointe Jupiter... Image superbe à 371x et correct à 742x mais le manque de transparence à cause de passage nuageux m'ont obligé à rester sage niveau grossissement. 
+Samedi 4 septembre 2021 : les conditions météos annoncées n'étaient pas très encourageantes. Passages nuageux prévus toute la nuit. A 22h hl ciel clair sans aucun nuage. Je décide de sortir rapidement le T400 pour voir ce que dit le seeing. En pointant une étoile pour la collimation, très bonne surprise ! L'atmosphère est bien stable. A 22h30 je pointe Jupiter... Image superbe à 371x et correct à 742x mais le manque de transparence à cause de passage nuageux m'ont obligé à rester sage niveau grossissement. 
 
 Première fois que je vois une Jupiter aussi riche en détail, les couleurs sont superbes. Beaucoup de détails très fins qu'il va être difficile de retranscrire sur un dessin. Je me lance quand même en commençant par l'hémisphère nord mise en place à 20h34 UT puis l'hémisphère sud à 20h50 UT. 
 
