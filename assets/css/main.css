@@ -23,6 +23,21 @@ body {
     text-decoration: underline;
 }
 
+.content ol, .content ul {
+    list-style: circle;
+    margin: 0;
+    padding: 20px;
+}
+
+.content a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.content strong {
+    color:white;
+}
+
 
 .pagination .page-item:hover {
     text-decoration: underline;
