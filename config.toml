@@ -1,6 +1,6 @@
 baseURL = "http://3c273.fr"
 languageCode = "fr-FR"
-title = "3C273.fr"
+title = "3c273.fr"
 [params]
 description = "Dessins, photographies et notes d'observations astronomiques par Guillaume Bertrand"
 paginate = 20

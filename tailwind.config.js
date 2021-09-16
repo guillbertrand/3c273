@@ -13,6 +13,9 @@ module.exports = {
         gray2:'#23232d',
         blue1:'#262b4c',
         lightYellow:'#e9bd15'
+    },
+    fontFamily: {
+      serif: ['DM Serif Display']
     }
   }
   },
